@@ -6,8 +6,21 @@
 
 
 ## Instructions to Run
-1. Run `make` to build the project.
-2. Run `./marble` to start the game.
+
+1. Install glut/freeglut and GLEW by using the following command in the terminal:
+   ```
+   sudo apt-get install freeglut3-dev libglew-dev
+   ```
+2. Verifying installation. Follow the following steps:
+   ```
+   sudo apt-get install mesa-utils
+   glxinfo | grep "direct rendering" ### Expected output -> direct rendering: Yes
+   glxinfo | grep "OpenGL core profile version" ### Expected output -> Some version number
+   glxgears ### Should run an animation having 3 gears. Verifies that setup is OK.
+   ```
+
+4. Run `make` to build the project.
+5. Run `./marble` to start the game.
 
 ## How ImGui Is Used
 - **User Interface:**
